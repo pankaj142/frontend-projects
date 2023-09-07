@@ -1,0 +1,141 @@
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* html{
+    font-size: 20px;
+} */
+
+.toolbox-cont{
+    background-color: black;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.toolbox-priority-cont{
+    background-color: aliceblue;
+    width: 15rem;
+    height: 3rem;
+    margin-left: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.color{
+    background-color: bisque;
+    height: 60%;
+    width: 3rem;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.action-btn-cont{
+    background-color: aliceblue;
+    width: 10rem;
+    height: 60%;
+    display: flex;
+}
+
+.add-btn,
+.remove-btn{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.large_icon{
+    font-size: 1.8rem;
+}
+
+.main-cont{
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-around;
+    /* if width is not enoug for some elements then they will be moved to the subsequent rows */
+    flex-wrap:wrap; 
+    row-gap: 2rem;
+}
+
+.ticket-cont{
+    background-color: aliceblue;
+    height: 10rem;
+    width: 15rem;
+    border: 1px solid gray;
+}
+
+.ticket-color{
+    height: 10%;
+    width: 100%;
+}
+
+.ticket-id{
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+.ticket-area{
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+
+.modal-cont{
+    border: 1px solid red;
+    height: 15rem;
+    width: 30rem;
+    display: flex;
+    position: fixed;
+    left: 37vw;
+    top: 37vh;
+}
+
+.textarea-cont{
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.priority-color-cont{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: beige;
+}
+
+.color_modal{
+    width: 55%;
+    height: 15%;
+}
