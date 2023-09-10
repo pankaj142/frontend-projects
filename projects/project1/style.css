@@ -88,6 +88,7 @@ html, body{
     height: 10rem;
     width: 15rem;
     border: 1px solid gray;
+    position: relative;
 }
 
 .ticket-color{
@@ -96,24 +97,39 @@ html, body{
 }
 
 .ticket-id{
-    margin-left: 0.5rem;
-    font-weight: 600;
+    height: 10%;
+    font-weight: 300;
+    font-size: 0.8rem;
+    padding-left: 4px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .ticket-area{
-    margin-left: 0.5rem;
+    height: 70%;
+    padding-left: 4px;
+    padding-right: 4px;
     font-weight: 600;
+    overflow-y: auto;
 }
 
+.lock_icon{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
 
 .modal-cont{
     border: 1px solid red;
-    height: 15rem;
-    width: 30rem;
+    height: 25rem;
+    width: 40rem;
+    background-color: #222f3e;
     display: flex;
     position: fixed;
-    left: 37vw;
-    top: 37vh;
+    left: 25vw;
+    top: 25vh;
+    /* display: none; */
+    visibility:hidden
 }
 
 .textarea-cont{
@@ -133,6 +149,9 @@ html, body{
     align-items: center;
     justify-content: space-evenly;
     background-color: beige;
+}
+.selected {
+    border: 5px solid rgb(24, 22, 22);
 }
 
 .color_modal{
