@@ -45,3 +45,20 @@
 Notes =>
     1. create new ticket, when no filter - no color selected in toolbar
 
+Issues to handles =>
+    we have added  single click and double click events on toolar color elements, for filter functionality.
+
+    when double click event happens, then two single click events also happens.
+
+    This does not create a visible issue.
+    Becasue, when first click happens, it execute the event handler for first click.
+    and when second click happens, it execute the event handler for second click.
+    then double click event handler also executes, that will overwrite previous changes.
+    So, this problem is not visible.
+
+    But this is not correct implementation. We should handle this scenario.
+    when double click event happens, then single click event handler function MUST not be called 2 times.
+
+    solution => use timeout 
+
+
