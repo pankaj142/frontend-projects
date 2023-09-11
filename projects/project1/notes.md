@@ -42,6 +42,33 @@
                 b. show all tickets 
 
 
+## Delete ticket
+    * click on delete icon on header
+        * change the color of delete icon to red
+    * click on ticket to delete 
+    * pop up will come up and ask for confirmation to delete
+    * Once you confirm the ticket is deleted
+
+
 Notes =>
     1. create new ticket, when no filter - no color selected in toolbar
+
+Issues to handles =>
+    we have added  single click and double click events on toolar color elements, for filter functionality.
+
+    when double click event happens, then two single click events also happens.
+
+    This does not create a visible issue.
+    Becasue, when first click happens, it execute the event handler for first click.
+    and when second click happens, it execute the event handler for second click.
+    then double click event handler also executes, that will overwrite previous changes.
+    So, this problem is not visible.
+
+    But this is not correct implementation. We should handle this scenario.
+    when double click event happens, then single click event handler function MUST not be called 2 times.
+
+    solution => 
+    approach 1 => use timeout
+    approach 2 => use Debouncing and throttling
+
 

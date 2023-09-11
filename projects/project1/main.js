@@ -1,10 +1,14 @@
 const modalContainer = document.querySelector('.modal-cont');
 const textArea = document.querySelector('.textarea-cont');
 const addTicketBtn = document.querySelector('.add-btn');
+const deleteTicketBtn = document.querySelector('.remove-btn');
+const deleteIcon = document.querySelector('.fa-trash')
 const colorModalList = document.querySelectorAll('.color_modal');
 const mainContainer = document.querySelector('.main-cont');
 const colorArray = ["red", "blue", "green", "purple"];
 const priorityColorsArr = document.querySelectorAll('.color');
+
+let deleteFlag = false;
 
 /***********************************   app level handlers  ***********************************/
 
@@ -78,6 +82,18 @@ textArea.addEventListener('keypress', function(e){
     }
 })
 
+// delete ticket functionality 
+deleteTicketBtn.addEventListener("click", function(e){
+    // prompt("hello", "dddddddddddd")
+
+    if(deleteFlag){
+        deleteIcon.style.color = 'black';
+        deleteFlag = false;
+    }else{
+        deleteIcon.style.color = 'red';
+        deleteFlag = true;
+    }
+})
 
 /***********************************   helper functions  ***********************************/  
 
@@ -117,6 +133,9 @@ function createTask(text, colorSelected){
     // handle color change
     const ticketColor = ticketContainer.querySelector('.ticket-color');
     handleColorChange(ticketColor);
+
+    // handle delete ticket 
+    handleTicketDelete(ticketContainer);
 }
 
 function handleLockUnlockTicket(lockIcon, textArea){
@@ -148,6 +167,17 @@ function handleColorChange(ticketColor) {
         const newColor = colorArray[(colorIndex + 1 ) %4];
         ticketColor.classList.remove(currentColor);
         ticketColor.classList.add(newColor)
+    })
+}
+
+function handleTicketDelete(ticketContainer){
+    ticketContainer.addEventListener("click", function(e){
+        if(deleteFlag){
+            let res = confirm("Do you want to delete this ticket?")
+            if(res){
+                ticketContainer.remove()
+            }
+        }
     })
 }
 
