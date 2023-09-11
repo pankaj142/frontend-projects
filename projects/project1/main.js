@@ -4,9 +4,16 @@ const addTicketBtn = document.querySelector('.add-btn');
 const colorModalList = document.querySelectorAll('.color_modal');
 const mainContainer = document.querySelector('.main-cont');
 const colorArray = ["red", "blue", "green", "purple"];
+const priorityColorsArr = document.querySelectorAll('.color');
 
+/***********************************   app level handlers  ***********************************/
 
-// Modal color selector 
+// show modal to add new ticket
+addTicketBtn.addEventListener('click', function(e){
+    modalContainer.style.display  = "flex";
+})
+
+// Modal color selector - set color of new ticket functionality when modal appears 
 for(let i=0;i<colorModalList.length; i++){
     colorModalList[i].addEventListener('click', function(e){
         let selectedColor = colorModalList[i].getAttribute('color');
@@ -24,15 +31,39 @@ for(let i=0;i<colorModalList.length; i++){
     })
 }
 
-addTicketBtn.addEventListener('click', function(e){
-    modalContainer.style.visibility = "visible";
-})
+// filter tickets functionality - when user click on toolbar color
+for(let i=0; i<priorityColorsArr.length; i++){
+    // handle single click - show only tickets of selected color
+    priorityColorsArr[i].addEventListener('click', function(e){
+        // add highligh border to the selected color in toolbar
+        for(let j=0; j< priorityColorsArr.length; j++){
+            priorityColorsArr[j].classList.remove("selected");
+        }
+        priorityColorsArr[i].classList.add("selected");
+        
+        // filter tickets
+        let selectedColor = priorityColorsArr[i].classList[1];
+        filterTickets(selectedColor);
+    })
 
+    // handle double click - show all tickets
+    priorityColorsArr[i].addEventListener('dblclick', function(e){
+        // remove highligh border from all colors in toolbar
+        for(let j=0; j< priorityColorsArr.length; j++){
+            priorityColorsArr[j].classList.remove("selected");
+        }
+
+        // show all tickets
+        showAllTickets();
+    })
+}
+
+// new ticket create functionality - when user press Enter key on textArea of modal 
 textArea.addEventListener('keypress', function(e){
     if(e.key == "Enter"){
         // get text and get selected color
         let text = textArea.value;
-        let colorSelected = document.querySelector('.selected')
+        let colorSelected = modalContainer.querySelector('.selected')
         colorSelected = colorSelected.getAttribute('color');
 
         // create task
@@ -43,18 +74,16 @@ textArea.addEventListener('keypress', function(e){
         setDefaultModalColor();
 
         // hide the modal
-        modalContainer.style.visibility = "hidden";
+        modalContainer.style.display = "none";
     }
 })
 
-// modalContainer.addEventListener('click', function(e){
-//     console.log("modal clicked")
-// })
+
+/***********************************   helper functions  ***********************************/  
 
 function setDefaultModalColor(){
     for(let i=0;i<colorModalList.length;i++){
         let currentColor = colorModalList[i].getAttribute('color');
-        // console.log("currentColor", currentColor)
         if(currentColor !== 'red'){
             colorModalList[i].classList.remove('selected');
         }else{ 
@@ -120,4 +149,23 @@ function handleColorChange(ticketColor) {
         ticketColor.classList.remove(currentColor);
         ticketColor.classList.add(newColor)
     })
+}
+
+function filterTickets(selectedColor){
+    const tickets = document.querySelectorAll(".ticket-cont");
+    for(let i=0; i<tickets.length; i++){
+        const currentColor = tickets[i].querySelector('.ticket-color').classList[1];
+        if(selectedColor !== currentColor){
+            tickets[i].style.display = "none";
+        }else{
+            tickets[i].style.display = "block";
+        }
+    }
+}
+
+function showAllTickets(){
+    const tickets = document.querySelectorAll(".ticket-cont");
+    for(let i=0; i<tickets.length; i++){
+        tickets[i].style.display = "block";
+    }
 }
