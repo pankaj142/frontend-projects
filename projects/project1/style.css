@@ -128,8 +128,8 @@ html, body{
     position: fixed;
     left: 25vw;
     top: 25vh;
-    /* display: none; */
-    visibility:hidden
+    display: none;
+    /* visibility:hidden */
 }
 
 .textarea-cont{

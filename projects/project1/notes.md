@@ -24,3 +24,24 @@
         * when click on ticket color strip, the color should change in the order : red => blue => green => purple
 
         
+## filter tickets
+    * tickets should be filtered based on color selected in color toolbar
+        * color clicked one time, ticket filtered based on the color
+        * color clicked 2 times, all tickets shown
+
+    steps 
+        1. add "click" (single) event listener on each color in toolbar  
+            event handler should be doing following :
+                a. get all tickets 
+                b. filter the tickets based on color selected
+                c. show filtered tickets 
+
+        2. add "double click" event listener on each color in toolbar
+            event handler should be doing following :
+                a. get all tickets 
+                b. show all tickets 
+
+
+Notes =>
+    1. create new ticket, when no filter - no color selected in toolbar
+
