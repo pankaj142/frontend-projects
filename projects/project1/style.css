@@ -1,4 +1,14 @@
 
+:root {
+    --red: #ff6b6b;
+    --blue: #54a0ff;
+    --green: #1dd1a1;
+    --purple: #5f27cd;
+    --modal-bg: #728499;
+    --white: white;
+}
+
+
 html, body{
     margin: 0px;
     padding: 0px;
@@ -13,7 +23,7 @@ html, body{
 } */
 
 .toolbox-cont{
-    background-color: black;
+    background-color:  var(--modal-bg);
     height: 5rem;
     display: flex;
     align-items: center;
@@ -21,42 +31,45 @@ html, body{
 }
 
 .toolbox-priority-cont{
-    background-color: aliceblue;
+    background-color: lightblue;
     width: 15rem;
     height: 3rem;
     margin-left: 7rem;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .color{
-    background-color: bisque;
+    /* background-color: bisque; */
     height: 60%;
     width: 3rem;
+    border-radius: 5px;
 }
 
 .red {
-    background-color: red;
+    background-color: var(--red);
 }
 
 .blue{
-    background-color: blue;
+    background-color: var(--blue);
 }
 
 .green{
-    background-color: green;
+    background-color: var(--green);
 }
 
 .purple{
-    background-color: purple;
+    background-color: var(--purple);
 }
 
 .action-btn-cont{
-    background-color: aliceblue;
+    background-color: lightblue;
     width: 10rem;
     height: 60%;
     display: flex;
+    border-radius: 5px;
 }
 
 .add-btn,
@@ -89,11 +102,14 @@ html, body{
     width: 15rem;
     border: 1px solid gray;
     position: relative;
+    border-radius: 10px;
 }
 
 .ticket-color{
     height: 10%;
     width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .ticket-id{
@@ -120,10 +136,11 @@ html, body{
 }
 
 .modal-cont{
-    border: 1px solid red;
+    /* border: 1px solid black; */
+    border-radius: 10px;
     height: 25rem;
     width: 40rem;
-    background-color: #222f3e;
+    background-color: var(--modal-bg);
     display: flex;
     position: fixed;
     left: 25vw;
@@ -135,10 +152,11 @@ html, body{
 .textarea-cont{
     width: 80%;
     height: 100%;
-    border: 1px solid black;
     padding: 1.5rem;
     font-size: 1.5rem;
     font-weight: 600;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .priority-color-cont{
@@ -148,13 +166,74 @@ html, body{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: beige;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .selected {
-    border: 5px solid rgb(24, 22, 22);
+    border: 5px solid var(--white);
 }
 
 .color_modal{
     width: 55%;
     height: 15%;
+}
+
+
+/* style for screen size width 400px to 600px */
+@media screen and (max-width: 600px){
+    .toolbox-cont{
+        gap:2rem
+    }
+
+    .toolbox-priority-cont{
+        width: 15rem;
+        margin-left: 2rem;
+    }
+
+    .color{
+        width: 3rem;
+    }
+
+    .action-btn-cont{
+        width: 6rem;
+    }
+
+    .modal-cont{
+        width: 70%;
+        left:15vw;
+    }
+}
+
+
+/* style for screen size width 400px max */
+@media screen and (max-width: 400px){
+    .toolbox-cont{
+        gap: 1.5rem;
+    }
+
+    .toolbox-priority-cont{
+        width: 10rem;
+        margin-left: 2rem;
+    }
+
+    .color{
+        width: 1.5rem;
+    }
+
+    .action-btn-cont{
+        width: 6rem;
+    }
+
+    .modal-cont{
+        width: 70%;
+        left:15vw;
+    }
+}
+
+/* style for screen size width 600px to 850px */
+@media screen and (max-width: 850px) and (min-width: 601px){
+    .modal-cont{
+        width: 70%;
+        left:15vw;
+    }
 }
