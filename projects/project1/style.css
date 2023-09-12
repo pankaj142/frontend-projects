@@ -25,9 +25,13 @@ html, body{
 .toolbox-cont{
     background-color:  var(--modal-bg);
     height: 5rem;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 4rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 
 .toolbox-priority-cont{
@@ -86,6 +90,8 @@ html, body{
 }
 
 .main-cont{
+    margin-top: 100px;
+    margin-bottom: 30px;
     padding-top: 3rem;
     padding-left: 2rem;
     padding-right: 2rem;

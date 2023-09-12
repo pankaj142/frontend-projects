@@ -50,8 +50,9 @@
     * Once you confirm the ticket is deleted
 
 
-# Responsiveness added
-
+# Style features
+## Responsiveness added
+## header made sticky
 
 Notes =>
     1. create new ticket, when no filter - no color selected in toolbar
