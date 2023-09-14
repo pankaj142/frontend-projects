@@ -1,0 +1,46 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+main{
+    background-color: #f5f6fa;
+    width: 400px;
+    height:200px;
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#rating-container{
+    width: 40%;
+    display: flex;
+
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+.star{
+    font-size: 2rem;
+}
+
+.star:hover{
+    cursor: pointer;
+}
+
+.selected{
+    color: gold;
+}
+
+#rating_count{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
