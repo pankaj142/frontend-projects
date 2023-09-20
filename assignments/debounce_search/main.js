@@ -5,7 +5,7 @@ const delayElem = document.querySelector("#delay_input");
 const delayBtn = document.querySelector("#delay_button");
 
 let count = 0;
-let delay = 2000;
+let delay = 2000; // 2 sec
 let delay_time = localStorage.getItem("delay_time");
 if(delay_time){
     delay = delay_time;
