@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deboucing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+        <main id="main-container">
+            <div id="search_container">
+              <div id="input_container">
+                <input id="search_input" type="text" placeholder="Enter keyword" />
+              </div>
+              <div id="input_container">
+                <label id="label_debouce_delay" for="debounce_delay">Debounce Delay:</label>
+                <input id="delay_input"  type="number" placeholder="Enter debounce delay time" value="2000">
+                <button id="delay_button">Save</button>
+            </div>
+              
+            </div>
+            <div id="search_history">
+              <div id="search_list">
+                <div class="history_item"></div>
+              </div>
+            </div>
+          </main>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
