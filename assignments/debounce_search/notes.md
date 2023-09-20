@@ -14,3 +14,4 @@
     That help in improving performance of website.
 
 
+    check the main.js file for more details about the debouce function code and its execution

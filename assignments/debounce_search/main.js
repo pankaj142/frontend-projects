@@ -16,6 +16,7 @@ function makeApiCall(){
     count++;
     let search_keyword = inputElm.value;
     
+    // instead of making API call, we are just adding a item in search history list
     // add new html div elment to search history container
     addNewItem(count, search_keyword)
 }
@@ -41,6 +42,22 @@ let debounced = debounce(makeApiCall, delay)
 
 inputElm.addEventListener("keypress", debounced)
 // End
+
+
+// "debounce" function is executed only one time
+// after first execution of "debounce" fun, it returns the inner function
+// that inner fun is stored in "debounced" fun
+// this "debounced" fun is passed as event hanlder for "keypress" event
+// that means the "debounced" fun i.e. the inner fun of "debounce" fun is called when "keypress" event happens
+
+// debounce fun =>
+//      declare timerId for the first time
+//      returns inner fun
+//          inner fun =>
+//               a. clear timerId is present 
+//               b. set new timerId with new setTimeout
+//               c. this setTimeout will be executed the callback (API call) after X delay seconds
+
 
 delayBtn.addEventListener("click", function(){
     localStorage.setItem("delay_time", delayElem.value)
