@@ -1,0 +1,112 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+}
+
+#header{
+    width: 100%;
+    height: 7%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-around;
+}
+
+#logo_and_location{
+    width: 13%;
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    width: 60%;
+    height: 90%;
+    background-color: bisque;
+}
+
+#logo img{
+    width: 70%;
+    height: 75%;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+#location{
+    width: 40%;
+    background-color: rgb(187, 135, 71);
+    display: flex;
+}
+
+#location-icon{
+    width: 20%;
+    background-color: aqua;
+}
+
+#location-info{
+    width: 90%;
+    background-color: rgb(112, 93, 220);
+}
+
+
+#location-message{
+    font-size: 0.8rem;
+    color: white;
+}
+
+#country-name{
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+}
+
+#search-box{
+    width: 64%;
+    background-color: aqua;
+}
+
+#user_account{
+    width: 23%;
+    background-color: rgb(198, 225, 226);
+    display: flex;
+}
+
+#language-dropdown{
+    width: 20%;
+    background-color: beige;
+}
+
+#account-info{
+    width: 36%;
+    background-color: rgb(211, 211, 49);
+}
+
+#returns-orders{
+    width: 22%;
+    background-color: rgb(150, 137, 214);
+}
+
+#cart{
+    width: 22%;
+    background-color: rgb(241, 179, 236);
+}
+
+
+#main{
+    width: 100%;
+    height: 87%;
+    background-color: rgb(211, 238, 172);
+}
+
+#footer{
+    width: 100%;
+    height: 6%;
+    background-color: blueviolet;
+}
