@@ -15,8 +15,33 @@
                 <li><a href="#">Travel Outside</a></li>
                 <li><a href="#">Online Packages</a></li>
             </ul>
-            <a href="#" class="register-btn">Register Now</a>
+            <a href="#" id="register-btn">Register Now</a>
         </nav>
+
+        <div id="seach-bar-container">
+            <h1>Find Your Next Story</h1>
+            <div id="search-bar">
+                <form>
+                    <div id="location-input">
+                        <label for="location">Location</label>
+                        <input type="text" placeholder="Where are you going?">
+                    </div>
+                    <div >
+                        <label for="check-in">Check in</label>
+                        <input type="text" name="check-in-dates" id="check-in-dates" placeholder="Add Date">
+                    </div>
+                    <div >
+                        <label for="check-out">Check out</label>
+                        <input type="text" name="check-out-dates" id="check-out-dates" placeholder="Add Date">
+                    </div>
+                    <div >
+                        <label for="check-in">Guests</label>
+                        <input type="text" placeholder="Add Guests">
+                    </div>
+                    <button id="search-btn"><img id="search-icon" src="assets/images/search.png" alt=""></button>
+                </form>
+            </div>
+        </div>
     </header>
     <script src="main.js"></script>
 </body>
