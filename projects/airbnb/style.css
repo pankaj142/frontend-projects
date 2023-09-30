@@ -6,6 +6,10 @@
     font-family: 'poppins', sans-serif;
 }
 
+html{
+    font-size: 16px;
+}
+
 header{
     min-height: 100vh;
     width: 100%;
@@ -19,49 +23,95 @@ header{
 nav{
     /* background-color: aqua; */
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 0 5%;
-    height: 20vh;
+    padding: 20px 7%;
 }
 
-nav .logo{
-    /* background-color: blueviolet; */
-    width: 11%;
-    height: 27%;
-    margin-top: 10px;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+.logo{
+    width: 140px;
+    cursor: pointer;
 }
 
-#nav-items{
-    width: 38%;
-    /* background-color: antiquewhite; */
+#nav-items li{
     list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 15px;
+    display: inline-block;
+    margin: 10px 30px;
+    /* background-color: rgb(255, 238, 0); */
 }
 
-#nav-items a {
+#nav-items li a{
     text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: white;
+    color: #fff;
+    font-size: 0.9rem;
 }
 
-nav .register-btn{
-    width: 130px;
-    height: 38px;
-    padding: 12px;
-    /* opacity: 0.5; */
-    background-color:white;
-    margin: 10px;
+#register-btn{
+    background-color: #fff;
+    color: #000;
     text-decoration: none;
-    color: black;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border-radius:20px;
+    padding: 8px 20px;
+    border-radius: 20px;
     text-align: center;
+    font-size: 0.9rem;
+}
 
+#seach-bar-container{
+    /* background-color: aqua; */
+    padding: 0 7%;
+}
+
+#seach-bar-container > h1{
+    padding-top: 25.5%;
+    text-align: center;
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+#search-bar{
+    width: 80%;
+    background-color: #fff;
+    margin: 30px auto;
+    padding: 6px 10px 6px 30px;
+    border-radius: 50px;
+}
+
+#search-bar form{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#search-bar form input{
+    display: block;
+    outline: none;
+    border: 0;
+    color: #000;
+    padding-top: 5px;
+    background: transparent;
+}
+
+#search-bar form label{
+    font-weight: 600;
+}
+
+#search-bar form button{
+    background-color: #ff5361;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border : 0;
+    outline: none;
+    cursor: pointer;
+}
+
+#search-bar form button img{
+    width: 15px;
+    height: 15px;
+}
+
+#location-input{
+    flex: 1;
 }
