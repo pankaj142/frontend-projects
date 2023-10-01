@@ -70,11 +70,11 @@ nav{
 }
 
 #search-bar{
-    width: 80%;
-    background-color: #fff;
+    width: 70%;
     margin: 30px auto;
     padding: 6px 10px 6px 30px;
     border-radius: 50px;
+    background-color: #fff;
 }
 
 #search-bar form{
@@ -114,4 +114,51 @@ nav{
 
 #location-input{
     flex: 1;
+}
+
+/* -------------------- Exclusive section -------------------- */
+
+#exclusive-section{
+    padding: 40px 7%;
+}
+
+/* section title */
+#exclusive-section h2{ 
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+#exclusive-items{
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+}
+
+.exclusive-item{
+    position: relative;
+}
+
+.exclusive-item img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.exclusive-item span{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.exclusive-item p{
+    font-size: 0.8rem;
+}
+
+.exclusive-item h3{
+    font-size: 1.4rem;
+    font-weight: 600; 
 }
