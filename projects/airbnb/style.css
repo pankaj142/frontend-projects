@@ -275,3 +275,45 @@ nav{
     font-size: 1.1rem;
 
 }
+
+/* --------- about-msg-section ----------- */
+
+#about-msg-section{
+    margin: 80px 7%;
+    text-align: center;
+}
+
+#about-msg-section h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+
+/* footer */
+
+footer{
+    margin: 10px 7%;
+    /* background-color: aqua; */
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: #999;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+footer hr{
+    background-color: #999;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    margin: 20px 0;
+}
+
+footer p{
+    padding-bottom: 15px;
+}
