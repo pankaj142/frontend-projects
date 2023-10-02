@@ -186,3 +186,92 @@ nav{
     margin-top: 10px;
     color: #333;
 }
+
+/* ------------- cta ---------------- */
+
+#cta-section{
+    margin: 80px 7%;
+    /* height: 400px; */
+    background-image: linear-gradient(to right, #3f2321, transparent), url(assets/images/banner-2.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5%;
+    color: #fff;
+}
+
+#cta-section h3{
+    padding: 12px 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3.1rem;
+    letter-spacing: 2px;
+}
+
+#cta-section p{
+    margin: 10px 0;
+}
+
+#cta-btn{
+    padding: 12px 30px;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    /* font-weight: 600; */
+    color: #fff;
+    background-color: #ff5361;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* ----------- traverllers-stories-section --------------- */
+
+#traverllers-stories-section{
+    margin: 10px 7%;
+}
+
+#traverllers-stories-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin-top: 30px;
+}
+
+.travellers-story-item{
+    position: relative;
+    text-align:center;
+}
+
+.travellers-story-item img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.travellers-story-item p{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* start btn */
+
+#start-btn{
+    background-color: #ff5361;
+    color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: block;
+    margin: 60px auto;
+
+    width: 80%;
+    max-width: 350px;
+    text-align: center;
+    font-size: 1.1rem;
+
+}
