@@ -123,14 +123,14 @@ nav{
 }
 
 /* section title */
-#exclusive-section h2{ 
+.section-title{ 
     font-size: 2.1rem;
     font-weight: 600;
     color: #333;
 }
 
 #exclusive-items{
-    margin: 30px 0;
+    margin: 2% 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 30px;
@@ -161,4 +161,28 @@ nav{
 .exclusive-item h3{
     font-size: 1.4rem;
     font-weight: 600; 
+}
+
+/* -------------------- trending places section -------------------- */
+
+#trending-places-section{
+    padding: 5px 7%;
+}
+
+#trending-place-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 30px;
+    margin: 2% 0;
+}
+
+#trending-place-items img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#trending-place-items h3{
+    font-weight: 600;
+    margin-top: 10px;
+    color: #333;
 }
