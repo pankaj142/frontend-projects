@@ -13,19 +13,26 @@
             <nav>
                 <div id="nav-first-part">
                     <img src="assets/images/nike_logo.png" alt="">
-                    <h4><a class="nav-item active" href="#">Home</a></h4>
-                    <h4><a class="nav-item" href="#">Men</a></h4>
-                    <h4><a class="nav-item" href="#">Women</a></h4>
-                    <h4><a class="nav-item" href="#">Collection</a></h4>
-                    <h4><a class="nav-item" href="#">Contact</a></h4>
+                    <a class="nav-item active" href="#">Home</a>
+                    <a class="nav-item" href="#">Men</a>
+                    <a class="nav-item" href="#">Women</a>
+                    <a class="nav-item" href="#">Collection</a>
+                    <a class="nav-item" href="#">Contact</a>
                 </div>
                 <div id="nav-second-part">
                     <i class="ri-search-line"></i>
                     <i class="ri-shopping-cart-2-line"><span>0</span></i>
-                    <i class="ri-menu-2-fill"></i>
+                    <i class="ri-menu-2-fill menu-icon"></i>
                 </div>
             </nav>
         </header>
+        <div class="dropdown-menu">
+            <a class="dropdown-nav-item active" href="#">Home</a>
+            <a class="dropdown-nav-item" href="#">Men</a>
+            <a class="dropdown-nav-item" href="#">Women</a>
+            <a class="dropdown-nav-item" href="#">Collection</a>
+            <a class="dropdown-nav-item" href="#">Contact</a>
+        </div>
         <section id="product-list-section">
             <div id="product-list-description">
                 <h4>Explore The Limited Edition</h4>
@@ -72,5 +79,28 @@
             </div>
         </section>
     </div>
+
+    <script>
+        const dropdown_menu = document.querySelector(".dropdown-menu");
+
+        let screen_size_reduced_flag = false; // first time when screen size reduced, make it true
+        window.addEventListener("resize", function() {
+            if (window.innerWidth < 880 && !screen_size_reduced_flag) {
+                screen_size_reduced_flag = true; // first time when screen size reduced, make it true
+
+                let menu_icon = document.querySelector(".menu-icon");
+                menu_icon.classList.add("menu-icon-dropdown");
+                menu_icon.classList.remove("menu-icon");
+
+                menu_icon.addEventListener('click', function(e){
+                    dropdown_menu.classList.toggle('open');
+
+                    const isOpen = dropdown_menu.classList.contains("open")
+                    menu_icon.classList = isOpen ? 'ri-close-fill menu-icon-dropdown' : 'ri-menu-2-fill menu-icon-dropdown'
+            })
+            }
+        });
+
+    </script>
 </body>
 </html>
