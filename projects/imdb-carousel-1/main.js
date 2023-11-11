@@ -1,5 +1,3 @@
-console.log("carousel js")
-
 const slides = document.querySelectorAll(".slide")
 let counter = 0;
 let imagesCount = 4;
