@@ -32,16 +32,16 @@
     margin-top: 20px;
 }
 
+#info{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
 #nav button{
     font-size: 1.2rem;
     font-weight: 600;
     border-radius: 20px;
     padding: 5px 20px;
     cursor: pointer;
-}
-
-#info{
-    text-align: center;
-    margin-top: 20px;
-    font-size: 1.5rem;
 }

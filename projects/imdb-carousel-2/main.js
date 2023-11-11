@@ -4,29 +4,29 @@ let imagesCount = 4;
 console.log(slides)
 
 slides.forEach((slide, index)=>{
-    slide.style.left = `${index * 100}%`;
+    slide.style.bottom = `${index * 100}%`;
 })
 
 const slideImage = () =>{
     slides.forEach((slide)=>{
-        slide.style.transform = `translateX(-${counter * 100}%)`
+        slide.style.transform = `translateY(${counter * 100}%)`
     })   
 }
 
 const goNext = () => {
+    console.log("next")
     if(counter == imagesCount -1){
         counter = -1;
     }
-    console.log("next")
     counter++;
     slideImage();
 }
 
 const goPrev = () => {
+    console.log("next")
     if(counter == 0){
         counter = imagesCount;
     }
-    console.log("next")
     counter--;
     slideImage();
 }
