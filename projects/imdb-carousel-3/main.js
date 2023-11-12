@@ -38,12 +38,10 @@ buttons.forEach((button)=>{
 
 const autoSlide = () => {
     updateCurrentActiveSlideIndex();
-
     nextIndex = currentIndex < slidesCount - 1 ? currentIndex + 1 : 0
 
     // remove the active class from current slide and add to next slide
-    slides[currentIndex].classList.remove("active");
-    slides[nextIndex].classList.add("active");
+    changeSlide();
 }
 
 // auto slide change
