@@ -42,10 +42,12 @@
 }
 
 #btn-prev{
-    left : 2rem
+    left : 2rem;
+    top: 14rem;
 }
 #btn-next{
-    right : -2rem
+    right : -2rem;
+    top: 14rem;
 }
 
 .slide{
