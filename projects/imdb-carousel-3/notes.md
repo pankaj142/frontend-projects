@@ -1,4 +1,4 @@
-# carousel with horizontal scrolling (without sliding effect)
+# carousel with horizontal scrolling (with auto sliding effect)
 
 ## Adding Prev and Next button on carousel
 
@@ -48,3 +48,8 @@
     - while, the inactive slide that is disappearing has 200ms delay, so it will wait untill new slide done, animating in and then it will disappear 
 
     - we add the delay in transition, just to avoid the white screen shown when this transition happens 
+
+
+### Auto slide effect
+    - after every 3 second, next slide is shown
+    - use setInterval 
