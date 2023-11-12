@@ -53,3 +53,8 @@
 ### Auto slide effect
     - after every 3 second, next slide is shown
     - use setInterval 
+
+### dots list added at carousel bottom
+    - dots list added to botton, indicating the number of images(slides)
+    - highligh the dot, indicating that number of slide is being shown on carousel currently
+    - update the highligh dot as the slide changes
