@@ -38,7 +38,7 @@
 .carousel-btn:hover, .carousel-btn:focus {
     color: white;
     background-color: rgba(0, 0, 0, 0.2);
-    outline: 1px solid black;
+    outline: 1px solid white;
 }
 
 #btn-prev{
