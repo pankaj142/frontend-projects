@@ -77,6 +77,11 @@
     width: 70%;
 }
 
+#info p {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
 #slider-dots{
     width: 80%;
     height: 30px;
@@ -124,4 +129,37 @@
     height: 200px;
     width: 70%;
     z-index: 10;
+}
+
+@media only screen and (max-width: 600px) {
+    #carousel-container{
+        width: 90%;
+    }
+
+    .carousel-btn{
+        font-size: 3rem;
+    }
+
+    #btn-prev{
+        left : 1.5rem;
+        top: 14rem;
+    }
+    #btn-next{
+        right : -1.6rem;
+        top: 14rem;
+    }
+
+    #gradient-container{
+        width: 90%;
+    }
+
+    #info{
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    #info p {
+        margin-bottom: 10px;
+    }
+
 }
