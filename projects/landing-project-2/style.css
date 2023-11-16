@@ -221,6 +221,10 @@ nav #nav_right #nav-active-item{
         top: 55%;
     }
 
+    #left_section #content h1{
+        font-size: 2rem;
+    }
+
     nav{
         padding: 30px 20px;
         margin-right: 10px;
