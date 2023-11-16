@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Gilroy";
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#left_section {
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    margin-right: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#nav-back-icon{
+    cursor: pointer;
+    color: rgba(0,0,0,0.3);
+    font-size: 1.8rem;
+}
+
+nav #nav_right a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: rgba(0,0,0,0.3);
+}
+
+nav #nav_right #nav-active-item{
+    position: relative; 
+    color: rgba(0,0,0,1);
+}
+
+#nav-active-item::after{
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: rgba(0,0,0,0.3);
+    left: 4%;
+    bottom: -5px;
+}
+
+#nav-twitter-icon{
+    color: #00acee;
+    cursor: pointer;
+}
+
+#left_section #content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#left_section #content h1{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+#left_section #content p{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.3);
+    line-height: 1.9rem;
+    margin: 25px 0;
+}   
+
+#left_section #content a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(0,0,0,0.8);
+    position: relative;
+}
+
+#left_section #content a::after{
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: rgba(0,0,0,0.3);
+    left: 4%;
+    bottom: -3px;
+}
+
+#right_section {
+    width: 60%;
+    height: 100%;
+    background-color: rgb(198, 130, 28);
+}
+
+#right_section #right_top{
+    height: 50%;
+    width: 100%;
+    background-color: tomato;
+    display: flex;
+}
+
+#right_section #right_bottom{
+    height: 50%;
+    width: 100%;
+    background-color: rgb(201, 202, 245);
+    background-image: url(assets/images/orange-slices-12.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#right_top_left{
+    width: 55%;
+    height: 100%;
+    background-image: url(assets/images/oranges11.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#right_top_right{
+    width: 45%;
+    height: 100%;
+    background-image: url(assets/images/orange-13.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Style for Responsiveness */
+
+/* @media */
+
